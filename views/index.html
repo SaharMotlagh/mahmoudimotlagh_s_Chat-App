@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>chat app with node and socket</title>
+</head>
+<body>
+    
+    <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            
+                <img src="/public/images/avatar.jpg"height="90" width="90">
+          
+          </div>
+          <nav>
+            <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+              <li>
+                <a href="#!">Viwe contact</a>
+              </li>
+              <li>
+                <a href="#!">media</a>
+              </li>
+              <li>
+                <a href="#!">more</a>
+                <ul class="navbar-dropdown">
+                  <li>
+                    <a href="#!">Sass</a>
+                  </li>
+                  <li>
+                    <a href="#!">Less</a>
+                  </li>
+                  <li>
+                    <a href="#!">Stylus</a>
+                  </li>
+               
+          </nav>
+        </div>
+      </section>
+      <section class="container">
+
+      <h1>let's chat</h1>
+    <h4 class="alart">someone is typing...</h4>
+    
+    <main id="app">
+        <section class="messages">
+          
+            <ul id="messages">
+                <!-- render a new message component for every message -->
+                <newmsg v-for="message in messages" :msg="message"></newmsg>
+            </ul>
+        </section>
+        <section>
+            <h2>Input messages here:</h2>
+            <input v-model = "nickname" id="nickname" type="text" placeholder="Nickname?">
+            
+            <form>
+                <label for="message">Something to say?</label>
+                <textarea @focus="dispatchTypingEvent" v-model="message" id="textarea" class="message" autocomplete="off"></textarea>
+                <input @click.prevent="dispatchMessage" type="submit" value="Send">
+            </form>
+        </section>
+
+        <!-- <script>
+            const socket = io();
+            socket.on('notification', (message) => {
+              const notification = document.createElement('div');
+              notification.innerHTML = message;
+              document.body.appendChild(notification);
+            });
+          </script> -->
+          </section>
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--adding the ssocket.io client -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js" type="module" defer></script>
+    
+</body>
+</html>
