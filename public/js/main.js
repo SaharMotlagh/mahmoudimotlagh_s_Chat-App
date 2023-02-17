@@ -54,13 +54,13 @@ const vm = createApp({
     dispatchTypingEvent() {
       //send the typing notification to the server
       socket.emit('typing_event', {user: this.nickname || 'anonymous'})
-    }
-  ,
+    },
   
   //
     dispatchDisconnectEvent () {
       socket.emit('disconnect_event', {
         name: this.nickname || 'anonymous'})
+       
     }  
   },
 
