@@ -1,6 +1,6 @@
 //imports go at the top
 import ChatMsg from './components/ChatMessage.js';
-import  ChatDsc from './components/ChatDisconnect.js';
+
 
 var socket = io();
 
@@ -14,10 +14,10 @@ function addNewMessage(message) {
     vm.messages.push(message);
 }
 
-function handleTypingEvent(user) {
-  console.log('someone is typing');
-  document.querySelector('.alart').getElementsByClassName.display = "block";
-}
+//function handleTypingEvent(user) {
+ // console.log('someone is typing');
+  //document.querySelector('.alart').getElementsByClassName.display = "block";
+//}
 //
 function DisconnectEvent(user) {
   console.log('chat user left the chat');
@@ -54,13 +54,14 @@ const vm = createApp({
     dispatchTypingEvent() {
       //send the typing notification to the server
       socket.emit('typing_event', {user: this.nickname || 'anonymous'})
-    }
-  },
+    },
   
   //
     dispatchDisconnectEvent () {
-      socket.emit('disconnect_event', {name: this.nickname || 'anonymous'})
-      
+      socket.emit('disconnect_event', {
+        name: this.nickname || 'anonymous'})
+       
+    }  
   },
 
     components: {
@@ -73,4 +74,4 @@ const vm = createApp({
   socket.addEventListener('new-message', addNewMessage);
   socket.addEventListener('typing', handleTypingEvent);
   //
-  socket.addEventListener('disconnect', DisconnectEvent);
+  socket.addEventListener('disconnect_event', DisconnectEvent);

@@ -15,7 +15,7 @@
         <div class="nav-container">
           <div class="brand">
             
-                <img src="/public/images/avatar.jpg"height="90" width="90">
+                <img src="images/avatar.jpg"height="90" width="90">
           
           </div>
           <nav>
@@ -45,8 +45,8 @@
       </section>
       <section class="container">
 
-      <h1>let's chat</h1>
-    <h4 class="alart">someone is typing...</h4>
+      <h1 class="hidden">let's chat</h1>
+    <h4 class="alart">User is no longer here</h4>
     
     <main id="app">
         <section class="messages">
@@ -64,7 +64,9 @@
                 <label for="message">Something to say?</label>
                 <textarea @focus="dispatchTypingEvent" v-model="message" id="textarea" class="message" autocomplete="off"></textarea>
                 <input @click.prevent="dispatchMessage" type="submit" value="Send">
+                <input @click.prevent="dispatchDisconnectEvent" type="submit" value="leave">
             </form>
+            
         </section>
 
         <!-- <script>

@@ -4,7 +4,11 @@ main section { padding: 1em; }
 
 label { display: block; padding-bottom: 0.5em;}
 
-textarea { width: 90%; height: 200px; }
+textarea { 
+    width: 1000px; 
+    margin-top: 200px;
+    height: 200px; 
+}
 
 input[type="submit"] { 
     display: block; 
@@ -13,22 +17,35 @@ input[type="submit"] {
     border-radius: 0.5em; 
 }
 
+.hidden {
+ display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin-left: 0px;
+    
+}
+
 .chat-messages {
-    float: left;
+    //float: left;
     clear: both;
     width: 45%;
     border-radius: 1em;
     padding: 0.5em;
-    background-color: rgba(0, 150, 150, 0.8);
+    background-color: rgba(244, 55, 184, 0.8);
 }
 
 .other-messages {
     
-    background-color: rgba(252, 97, 1, 0.872);
+    background-color: rgba(160, 100, 228, 0.872);
 }
 .alart {
     display: none;
-    color: aqua;
+    color: rgb(40, 18, 101);
 }
 
 /*nav bar*/
@@ -39,16 +56,17 @@ body{
      font-family: 'Roboto', sans-serif;
 }
  .navigation {
-     height: 55px;
-     background: linear-gradient(45deg, #4199fe, #74b4fe);
+     height: 100px;
+     background: #650a53;
 }
  .brand {
-     position: absolute;
+     
      padding-left: 20px;
      float: left;
      line-height: 55px;
      text-transform: uppercase;
      font-size: 1.4em;
+     
 }
  .brand a, .brand a:visited {
      color: #ffffff;
