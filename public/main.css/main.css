@@ -15,8 +15,7 @@ label {
 }
 
 textarea {
-  width: 1000px;
-  margin-top: 200px;
+  width: 90%;
   height: 200px;
 }
 
@@ -27,33 +26,22 @@ input[type=submit] {
   border-radius: 0.5em;
 }
 
-.hidden {
-  display: none;
-}
-
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  margin-left: 0px;
-}
-
 .chat-messages {
+  float: left;
   clear: both;
   width: 45%;
   border-radius: 1em;
   padding: 0.5em;
-  background-color: rgba(244, 55, 184, 0.8);
+  background-color: rgba(0, 150, 150, 0.8);
 }
 
 .other-messages {
-  background-color: rgba(160, 100, 228, 0.872);
+  background-color: rgba(252, 97, 1, 0.872);
 }
 
 .alart {
   display: none;
-  color: rgb(40, 18, 101);
+  color: rgb(65, 25, 175);
 }
 
 /*nav bar*/
@@ -64,11 +52,12 @@ body {
 }
 
 .navigation {
-  height: 100px;
-  background: #650a53;
+  height: 55px;
+  background: linear-gradient(45deg, #4199fe, #74b4fe);
 }
 
 .brand {
+  position: absolute;
   padding-left: 20px;
   float: left;
   line-height: 55px;
@@ -241,6 +230,7 @@ nav ul li ul li a {
   }
 }
 * {
+  margin: 0;
   border: none;
   padding: 0;
   box-sizing: border-box;
@@ -248,18 +238,15 @@ nav ul li ul li a {
 
 body {
   font-size: 16px;
-  background-color: rgb(229, 158, 235);
+  background-color: rgb(233, 212, 235);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: 0 auto;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */

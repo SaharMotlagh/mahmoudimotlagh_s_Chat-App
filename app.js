@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
 
     //my rules
     socket.on('disconnect_event', function(user) {
-      console.log('chat user disconnected');
+      console.log('chat user is disconnected');
       io.emit('notification', user);
     })
 });
