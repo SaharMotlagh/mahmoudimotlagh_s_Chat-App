@@ -57,11 +57,11 @@
             </ul>
         </section>
         <section>
-            <h2>Input messages here:</h2>
-            <input v-model = "nickname" id="nickname" type="text" placeholder="Nickname?">
+            <h2>Let's talk</h2>
+            <input id=talk v-model = "nickname" id="nickname" type="text" placeholder="Nickname?">
             
             <form>
-                <label for="message">Something to say?</label>
+                <label for="message"  class="hidden">Let's talk</label>
                 <textarea @focus="dispatchTypingEvent" v-model="message" id="textarea" class="message" autocomplete="off"></textarea>
                 <input @click.prevent="dispatchMessage" type="submit" value="Send">
                 <input @click.prevent="dispatchDisconnectEvent" type="submit" value="leave">

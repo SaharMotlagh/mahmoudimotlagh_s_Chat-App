@@ -6,8 +6,10 @@ label { display: block; padding-bottom: 0.5em;}
 
 textarea { 
     width: 1000px; 
-    margin-top: 200px;
+    margin-top: 2px;
     height: 200px; 
+    border-radius: 40px;
+    
 }
 
 input[type="submit"] { 
@@ -15,6 +17,11 @@ input[type="submit"] {
     margin-top: 1em; 
     padding: 8px 12px; 
     border-radius: 0.5em; 
+}
+
+#talk {
+    margin-top: 300px;
+    border-radius: 40px;
 }
 
 .hidden {
