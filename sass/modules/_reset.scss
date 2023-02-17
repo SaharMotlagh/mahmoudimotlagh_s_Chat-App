@@ -8,7 +8,7 @@ textarea {
     width: 1000px; 
     margin-top: 2px;
     height: 200px; 
-    border-radius: 40px;
+    border-radius: 10px;
     
 }
 
@@ -40,7 +40,7 @@ input[type="submit"] {
 .chat-messages {
     //float: left;
     clear: both;
-    width: 45%;
+    width: 800px;
     border-radius: 1em;
     padding: 0.5em;
     background-color: rgba(244, 55, 184, 0.8);
@@ -64,6 +64,7 @@ body{
 }
  .navigation {
      height: 100px;
+     width: 100%;
      background: #650a53;
 }
  .brand {
